@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head> 
+<body>
+    <div class="iconForm">
+       
+   <h1>🌺Форма заказа иконочек для Leksa 🌺 </h1>
+    <form action="">
+        <label for="inp" class="label1">🌼 Напишите сюда ваше прекрасное имя!</label>
+        <input id="inp" type="text" name="name"> 
+        <label class="label2" for="inp2">🌹 Какую иконочку вы выберите? 🌹</label>
+        <!--<select name="select" id="inp2"></select>-->
+        <!-- <input type="button" onclick="getIcon()" id="inp2" value="Выбрать! 🌸"> -->
+    </form>
+</div> 
+
+<div class ="card" id="kar"> 
+    <h2></h2>
+    <img src="" alt="">
+</div>
+
+<script>  
+
+    let div = document.body.firstElementChild;
+
+    let images = [
+        {name: "cat", path:"img/cat.png"},
+        {name: "doggy", path: "img/dog.png"},
+    ];
+
+    let select = document.createElement("select");
+    images.forEach(el => {
+        let opt = new Option(el.name, el.path); 
+        select.appendChild(opt);
+    });
+    console.log(select);
+    div.appendChild(select);
+
+        let inp = document.createElement("input");
+        inp.type = "text";
+        document.body.appendChild(inp);
+
+        let picture = document.body.firstElementChild.firstElementChild;
+        let name = document.body.firstElementChild.lastElementChild;
+
+        console.log(picture, name) 
+
+    select.onchange = (e) =>  {
+ picture.src = e.target.value;
+} 
+
+ 
+</script>
+
+
+    
+</body>
+</html>

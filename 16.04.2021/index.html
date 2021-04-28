@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="wrapper">
+         <div class="form">
+             <!--- .row*4a>label[for]+input[type id name]--> 
+             <div class="row">
+                 <span>Print</span>
+                 <div>
+                
+                 <input type="radio" id="pr1" name="print">
+                 <label for="pr1"></label>
+                 <input type="radio" id="pr1" name="print">
+                 <label for="pr2"></label>
+                 <input type="radio" id="pr1" name="print">
+                 <label for="pr3"></label>
+                 <input type="radio" id="pr1" name="print">
+                 <label for="pr4"></label>
+                </div>
+
+             <div class="row">
+                 <label for="position">расположение</label>
+                 <select id ="pos" id="" name="position">
+                     <option value="center">Центр</option>
+                     <option value="right top">Левый верх</option>
+                     <option value="left bottom">Левый низ</option>
+                 </select>
+                </div>
+             <div class="row">
+                 <label for="size">размер принта</label>
+                 <input type="range" id="" name="size" min="10" max="80" step="5">
+                </div>
+         <div class="result">
+               <div class="circle"></div>
+               <div class="t-shirt"></div>
+         </div>
+     </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

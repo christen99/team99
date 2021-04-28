@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- action - куда отправится форма (на север)-->
+    <h1>форма заказа кактуса</h1>
+     <form action="" method="GET" enctype="multipart/form-data">
+        <label for="inp1">Как зовут кактус?</label>
+        <input type="text" name="name" id="inp2"> 
+
+        <label for="inp2">Какое количество кактусов покупаете</label>
+        <input type="number" name="count" id="inp2" max="99" 
+        min="-5" step="1" value="3">
+
+        <label for="inp3">Выберите кактус</label>
+        <select name="cactus" id="inp3">
+            <option value="">Нотокактус</option>
+            <option value="">Скрипткактус</option>
+            <option value="">Эпифилююм</option>
+            <option value="">Маммиллярия</option>
+            <option value="">Адениум</option>
+            <option value="">Кристинокактус</option>
+            <option value="1">Monday</option>
+             </select>
+
+             <label for="inp4">коментарии к заказу</label>
+             <textarea name="comments" id="inp4"></textarea>
+
+             <!-- <input type="submit" value="купить кактус">--> 
+             <!-- <button type="button" onclick="getOrder()">купить кактус</button-->
+             <button type="submit">купить кактус</button>
+           </form>
+            
+           <div class="order"></div>
+           <a href="">тык</a>
+
+           <div class="order"></div>
+            <script src="script.js"></script>
+</body>
+</html>

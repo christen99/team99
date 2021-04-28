@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around; 
+        }
+        .card {
+            border-radius: 8px;
+            width: 200px;
+            height: 100px;
+            transition: box-shadow 500ms;
+        }
+        .clicked {
+            box-shadow: 0 0 5px rgba(0,0,0, .4);
+        }
+</head>
+<body>
+    <script>
+        /* 
+              Создать три карточки разного цвета, находящиеся равноудаленно друг от друга 
+              по горизонтали 
+              карточки имеют размер 100рх в высоту и 200рх в ширину 
+              скругление углов - 8 рх 
+              при клике мышкой по карточке - у нее появляется тень 
+        */ 
+       let colors = ["red", "green", "blue"]; 
+       colors.forEach(c => {
+           let card = document.createElement("div");
+           card.style.background = c;
+           card.style.width = "200px";
+           card.style.height = "100px";
+           document.body.appendChild(card);
+           card.onclick = (e) => {
+               /* e - событие ( event ) */ 
+               /* e.target  - кто вызвал событие */ 
+               e.target.className = e.target. 
+               className + " clicked"; // className - атрибут в html  
+               settimeuy
+           }, 3000);
+       })
+
+
+</body>
+</html>

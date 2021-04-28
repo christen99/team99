@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <style> 
+      #weather {
+          border: 1px solid;
+          border-radius: 20px;
+          width: 200px;
+          font: 20px sans-serif;
+          padding: 30px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-content: space-between;
+      }
+      .city, .mood {
+          width: 100%;
+          text-align: center;
+      }
+      .city {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      .pic {
+          font-size: 2.5em;
+      }
+    </style>
+
+</head>
+<body>
+    <div id="weather">
+        <div class="city">Calabassas</div>
+        <div class="pic"></div>
+             <i class="fas fa-cloud-sun"></i>
+        <div class="temp">25</div>
+        <div class="mood">Relax</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select image</title>
+    <style>
+     
+     .card {
+         /* 
+           сдвиг по оси х (вправо)
+           сдвиг по оси у (вниз)
+           радус размытия
+           радиус охвата 
+           цвет тени (полупразрачный черный)
+         */ 
+          box-shadow: blueviolet;
+          width: 250px;
+
+         
+     }
+    </style>
+
+</head>
+<body>
+    <div class="card">
+        <img src="" alt="картинка"> 
+        <h2> hello  </h2>
+    </div>
+
+    <script>
+        let images = [
+            {name: "Cat", path:"images/cat-solid.svg"}, 
+            {name: "doggy", path: "images/dog-solid.svg"},
+            {name: "Paw" , path: "images/paw-solid.svg"},
+        ];
+
+        let select = document.createElement("select"); 
+        images.forEach(el => { //  метод массива 
+            let opt = new Option(el.name, el.path);
+            select.appendChild(opt);
+        });
+        document.body.appendChild(select);
+        let inp = document.createElement("input");
+        inp.type = "text";
+        document.body.appendChild(inp);
+
+        /*  Добываем картинку с заголовком из карточки */ 
+        let picture = document.body.firstElementChild.firstElementChild;
+        let name = document.body.firstElementChild.lastElementChild;
+        // name = picture.nextElementSibling 
+
+        console.log(picture, name) 
+
+        select.onchange = (e) =>  {
+           // this !== select  для стрелочных функций 
+         picture.src = e.target.value;
+        } 
+
+        inp.onchange = (e) => {
+            name.innerText = e.target.value;
+        }
+    </script>
+</body>
+</html>

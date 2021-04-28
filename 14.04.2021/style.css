@@ -1,0 +1,35 @@
+.shoe{
+    position: relative;
+    width: 300px;
+    height: 80px;
+    background: no-repeat top left / cover url(shoe.png);
+}
+.left-bot {
+position: absolute;
+bottom:0;
+left: 0;
+background: rgba(255,0,255,.3);
+border-radius: 0 0 20% 3px /  0 0 75% 3px;
+}
+.right-bot {
+    position: absolute;
+    right: -416px;
+    /* background: rgba(255,0,255,.3); */
+    background: bisque;
+    bottom: 3px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 46%;
+    clip: rect(983px, 575px, 1000px, 0px);
+}
+
+.top {
+    position: absolute;
+    width: 43px;
+    height: 40px;
+    background: bisque;
+    bottom: 18px; 
+    left: 206px;
+    transform-origin:-1px bottom;
+    transform: skew(-11deg, 18deg);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+     <style>
+         button {
+             margin-buttom: 20px;
+         }
+     </style>
+
+</head>
+<body>
+    <h1> window </h1>
+    <button onclick="sayHello();">press me!</button>
+    <br>
+    <button onclick="openWin();">Открыть форточку</button>
+    <button onlick="closeWin();" >закрыть карточку</button>
+    <button onclick="colorWin();">покрасить форточку</button>
+
+     <script>
+        function sayHello () {
+          //  alert("suuup! =)");
+          document.write("omomomom");
+        }
+        let windows = []; 
+        let w;
+
+        function getNumber(max=10, min=0) {
+            return Math.floor(Math.random() * (max -min) + min);
+        }
+
+        /* 
+        
+        создать функцию  getRGB() -  вернет "rgb(n,n,n)"
+
+        */ 
+
+        function getRGB() {
+            return `rgb(${getNumber(256)},${getNumber(256)},${getNumber(256)})`;
+        }
+        
+
+
+        /* 
+ научиться окрывать цветные окна с рандомным размером! 
+ внутри окошка будет его порядковый номер (начиная с единицы)
+ и любое слово из прошлой лекции  
+ помимо цветого окна должен быть цветной тест<
+
+ создать кнопочку, которая заменяет в последнем окошке
+*/
+
+        function openWin() {
+            // window.open(" a link here ,"...)
+              w = window.open(window.open("", "",
+            "width=300, height=200"));
+            windows.push(w);
+            w.document.write(getNumber());
+           // w.document.write(Math.floor(Math.random() * 100));
+            //console.log(windows);
+        }
+        function closeWin () { 
+            //   windows.pop() - взять последнее открытое окно
+            // windows.shift() - взять первое открытое окно
+            windows.shift().close();
+            // console.log(windows);
+        }
+        function colorWin() {
+            w.document.body.style = "background-color:" + getRGB();
+        }
+        document.write("<h2 style=\"color: blue;\">ololo</h2>");
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My file</title>
+    <style>
+        body {
+            margin: 0;
+            font: 20px sans-serif;
+            color: #fff;
+        }
+        .container {
+            height: calc(100vh - 100px); /* viewport 
+            height*/ 
+            /*  background-color: blueviolet;*/ 
+            background-image: linear-gradient(darkviolet, blue );
+            padding: 50px;
+        }
+        .bg {
+            border: 1px solid #fff;
+            border-radius: 10px;
+            height: 100%; 
+            background-image: url(unnamed.gif); /*  относительный путь */
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: contain; /* cover - растянуть, contain - вписать */ 
+            padding: 50px;
+            /* box-sizing: content-box; */
+            box-sizing: border-box;
+            display: flex; 
+            flex-direction: column;  /* ` расположение текста */ 
+            justify-content: center;
+        }
+        h1 {
+            margin: 0 0 10 px;
+            font-size: 100px;
+        }
+        
+        p {
+            margin: 0;
+            font-size: 27px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg">
+            <h1>JavaScript</h1>
+            <p> just doing some practice here lol enjoy </p>
+        </div>
+    </div>
+    <script>
+        console.log("hello");
+    </script>
+    <script src="lesson3.js">
+        console.log("hello world!");
+    </script>
+
+
+</body>
+</html>

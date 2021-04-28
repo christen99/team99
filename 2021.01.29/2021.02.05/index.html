@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        td { 
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="setNumber();">add a new number</button>
+       
+    <table>
+        <!-- tr*3>td*4{$$} -->
+        <tbody></tbody>
+
+         
+      </tr>
+    </table>
+
+
+    <script>
+         function getNumber(max=10, min=0) {
+             return Math.floor(Math.random() * (max - min) + min);
+         }
+          /* 
+            создать таблицу со случанйыми числами 
+            при нажатии на кнопку в таблицу будет добовляться
+            новая ячейка с числом
+            в таблице будет 5 столбцов 
+          */
+
+          /* 
+           nodeType - порядковый номер узла (тип) 
+           1 - узел элемента 
+           3- текстовый узел
+           8-  узел коментария
+          nodeName - имя узла
+          nodeValue 
+          */ 
+
+          /*
+                 firstElementChild
+                 lastElementChild
+                 nextElementSibling
+                 previousElementSibling 
+
+                 пройтись по узлам только ЭЛЕМЕНТОВ! 
+
+          
+          
+          
+          */
+
+
+         // let tbl = document.body.firstElementChild.nextElementSibling;
+         let tbl = document.body.firstElementchild.nextelementSibling;
+         
+         //let comment = tbl.firstchild.nextSibling
+         //cosole.log(comment.nodeType);
+         function setNumber() {
+             let n = getNumber(100, 1);
+
+             if (tbl.haschildNodes()) {
+                 let row = table.firstElementchild;
+                if (row.childElementCount < cellsCnt) {
+                 row.innerHTML += `<td>${n}</td>` 
+              } else {
+                  tbl.innerHTML = ` 
+                  <tr> 
+                    <td> ${n}</td>
+                    </tr> 
+                    `
+              } else { // иначе в таблицу добовляем новую строку 
+                //ячейкой 
+                  tbl.innerHTML = ` 
+                  <tr> 
+                    <td> ${n}</td>
+                    </tr> 
+                    `
+              }
+
+
+    
+    </script>
+</body>
+</html>

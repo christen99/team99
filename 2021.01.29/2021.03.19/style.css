@@ -1,0 +1,61 @@
+body {
+
+    margin: 0;
+    font: 15px sans-serif cursive;
+    padding: 50px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 600px auto;
+    gap: 50px;
+   background-color:rgb(243, 203, 209);
+}
+
+.iconForm {
+    height: 299px;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px dotted rgba(212, 35, 35, 0.726);
+    margin: 50px;
+    box-sizing: border-box;
+    background: url(https://cdn.booooooom.com/wp-content/uploads/2020/03/Du1.jpg)no-repeat center / 110%; 
+    border-radius: 50px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+h1 {
+    align-items: baseline;
+    margin: 2;
+    grid-column-end:span 1;
+    color: rgb(180, 89, 175);
+
+}
+
+.label1 {
+    font: 9px sans-serif cursive;
+    margin: 2;
+    padding: 10px;
+    grid-column-end:span 1;
+    color:lightyellow;
+}
+
+.label2 {
+    font: 30px sans-serif cursive;
+    margin: 3;
+    padding: 25px;
+    color:lightyellow;
+}
+h4 {
+    font: 20px sans-serif;
+    margin: 2;
+    padding: 5px;
+    color:lightyellow;
+}
+

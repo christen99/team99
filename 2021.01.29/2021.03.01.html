@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>узлы (node)</title>
+    <style> 
+    .cyan {
+        color: rgb(51, 178, 228);
+        background-image:linear-gradient(120deg, yellowgreen, greenyellow);
+        padding: 0 10px;
+    }
+    p {
+        display: flex;
+        flex-direction: column;
+    }
+    </style>
+</head>
+<body>
+    <h1>Hello you!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur a
+        dipisicing elit. <span class="cyan"> Est error nemo ducimus nesciunt, </span>
+            accusamus nobis.</p>
+            <script> 
+            /* Dom - document object model */ 
+            console.log(document);
+            let html = document.ChildNodes[1];
+           // let body = html.ChildNodes[2]; 
+          //  let body = html.lastChild;
+          let body = document.body;
+
+
+            /* 
+                   childNodes -  спиоск детей в виде массива
+                   firstChild -  первый реебнок(старший сын) 
+                   lastChild -  первый реебнок(младший сын) 
+                   nextSibling - старший брат
+                   parentNode -  родитель 
+            */ 
+            body.style.background = "#222";
+            let p = body.firstChild.nextSibling.nextSibling.
+            nextSibling;
+            p.style.color = "peachpuff"; 
+            console.log(p);
+           // p.innerText = "Это все на сегодня! хотите дз?"
+           
+           // найти тэг span и поменять 
+        // внтури него содержимое 
+            </script>
+</body>
+</html>

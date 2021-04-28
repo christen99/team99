@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        button {
+            font: bold 30px "Impact", fantasy;
+            padding: 10px 20px;
+            background-color: crimson;
+            color:darkblue;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            cursor: pointer;  
+            outline : none;
+            border: none;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: none;
+            width: 1000px;
+            height: 500px;
+            margin-top: 50px;
+            display: grid;
+            /* задать количество и размеры столбцов */ 
+            grid-template-columns: 200px 500px 1fr;
+            /* задать количество и рамзеры строк */ 
+            grid-template-rows: 100px 200px;
+            gap: 20px 20px; /* расстояние между столбцами */ 
+        }
+        .item {
+           /*  min-height: 50px; */ 
+            border: 1px solid crimson;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="file.js"></script>
+</head>
+<body>
+    <button onclick="showClick()">button</button>
+    <!-- .container>.item.item$*24 -->
+    <div class="container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+        <div class="item item6"></div>
+        <div class="item item7"></div>
+        <div class="item item8"></div>
+        <div class="item item9"></div>
+        <div class="item item10"></div>
+        <div class="item item11"></div>
+        <div class="item item12"></div>
+        <div class="item item13"></div>
+        <div class="item item14"></div>
+        <div class="item item15"></div>
+        <div class="item item16"></div>
+        <div class="item item17"></div>
+        <div class="item item18"></div>
+        <div class="item item19"></div>
+        <div class="item item20"></div>
+        <div class="item item21"></div>
+        <div class="item item22"></div>
+        <div class="item item23"></div>
+        <div class="item item24"></div>
+    </div> 
+
+    <script>
+        let btn = document.body.firstElementChild;
+       // let btn = document.getElementsByTagName("button")[0];
+
+      /* 
+       полностью заменит ранее заданное событие по клику 
+       btn.onclick = function() {
+            btn.innerText = "Click!";
+       } 
+     
+       let a = {
+           x: 1
+       }
+       a.x = 2 
+       console.log(a);
+       */ 
+      let words = ["Click", "Meow"];
+      let setText = function() {
+          btn.innerText = words[ping - 1];
+          if (ping > 1) {
+              btn.removeEventListener("click", setText);
+          }
+      }
+
+      btn.addEventListener("click", setText);
+      btn.addEventListener("Click", function() {
+          btn.style.color = "orangered";
+      });
+      btn.addEventListener("click", function() {
+          btn.nextElementSibling.style.display = "grid";
+      });
+    </script>
+</body>
+</html>
